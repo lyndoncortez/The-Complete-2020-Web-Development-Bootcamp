@@ -49,18 +49,68 @@ const orange = new Fruit({
 //     }
 // });
 
-Fruit.find(function(err, fruits){
-    if (err) {
-        console.log(err)
-    } else {
+// Fruit.deleteOne({name: "Peach"}, function(err){
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log("Successfully deleted the document");
+//     }
+// });
 
-        mongoose.connection.close();
+// Fruit.find(function(err, fruits){
+//     if (err) {
+//         console.log(err)
+//     } else {
 
-        for (var i = 0; i < fruits.length; i++) {
-            console.log(fruits[i].name);
-        }
-    }
+//         mongoose.connection.close();
+
+//         for (var i = 0; i < fruits.length; i++) {
+//             console.log(fruits[i].name);
+//         }
+//     }
     
+// });
+
+// Fruit.updateOne({_id: "5fec674ea7cc6deada2b7e17"}, {name: "Peach"}, function(err) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log("Successfully updated the document");
+//     }
+// });
+
+const personSchema = new mongoose.Schema ({
+    name: String,
+    age: Number,
+    favoriteFruit: fruitSchema
 });
+
+const Person = mongoose.model("Person", personSchema);
+
+const onepiece = new Fruit ({
+    name: "Goma-Goma Fruit",
+    score: 10,
+    review: "Legandary fruit."
+});
+
+onepiece.save();
+
+// const person = new Person ({
+//     name: "Amy",
+//     age: 12,
+//     favoriteFruit: pineapple
+// });
+
+// person.save();
+
+Person.updateOne({_id: "5fed6c1c2387c969f303725c"}, {favoriteFruit: onepiece}, function(err) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("Successfully updated the document");
+    }
+});
+
+
 
 
