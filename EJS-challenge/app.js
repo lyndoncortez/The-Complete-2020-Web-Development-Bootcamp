@@ -61,7 +61,7 @@ app.post("/compose", function(req, res) {
   posts.push(post);
   res.redirect("/");
   
-})
+});
 
 
 app.listen(3000, function() {

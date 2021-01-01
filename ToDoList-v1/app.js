@@ -33,7 +33,6 @@ app.post("/", function(req, res) {
         res.redirect("/");
     }
     
-    
 });
 
 app.get("/work", function(req, res) {
