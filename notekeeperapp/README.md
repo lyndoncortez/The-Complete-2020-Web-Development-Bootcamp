@@ -16,4 +16,4 @@ You will also see any lint errors in the console.
 
 💾 You can preview it here: [NoteKeeper App](https://notekeeperos.netlify.app/)
 
-<img src="https://github.com/lyndoncortez/The-Complete-2020-Web-Development-Bootcamp/blob/master/notekeeperapp/screenshot.png?raw=true>
+<img src="https://github.com/lyndoncortez/The-Complete-2020-Web-Development-Bootcamp/blob/master/notekeeperapp/screenshot.png?raw=true">
